@@ -1,4 +1,4 @@
-package tp1;
+package TP1.tests;
 
 import TP1.Palindrome;
 import org.junit.jupiter.api.Test;

@@ -1,6 +1,6 @@
-package org.example.tests;
+package TP0.tests;
 
-import org.example.RomanNumeral;
+import TP0.RomanNumeral;
 import org.junit.jupiter.api.Assertions;
 
 import org.junit.jupiter.api.Test;

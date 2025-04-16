@@ -1,4 +1,4 @@
-package org.example;
+package TP0;
 
 public class Prime {
     public static boolean isPrime(int n) {

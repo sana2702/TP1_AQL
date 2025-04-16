@@ -1,4 +1,4 @@
-package org.example;
+package TP0;
 
 public class Matrix {
     private int[][] array;

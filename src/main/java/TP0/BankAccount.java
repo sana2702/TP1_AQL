@@ -1,4 +1,4 @@
-package org.example;
+package TP0;
 
 public class BankAccount {
     private double balance;

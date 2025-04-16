@@ -1,6 +1,7 @@
-package org.example.tests;
+package TP0.tests;
 
-import org.example.Factorial;
+import TP0.Factorial;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -8,7 +9,7 @@ public class factorialTest {
 
     @Test
     public void testFactorialZero() {
-        assertEquals(1, Factorial.factorial(0));
+        Assertions.assertEquals(1, Factorial.factorial(0));
     }
 
     @Test

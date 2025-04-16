@@ -1,6 +1,7 @@
-package org.example.tests;
+package TP0.tests;
 
-import org.example.Prime;
+import TP0.Prime;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -8,7 +9,7 @@ public class PrimeTest {
 
     @Test
     public void testNegativeNumbers() {
-        assertFalse(Prime.isPrime(-1));
+        Assertions.assertFalse(Prime.isPrime(-1));
         assertFalse(Prime.isPrime(-10));
     }
 
