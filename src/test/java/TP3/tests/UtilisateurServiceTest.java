@@ -12,26 +12,22 @@ class UtilisateurServiceTest {
 
     @Test
     void testCreerUtilisateur() {
-        // Création du mock de l'API
         UtilisateurApi utilisateurApiMock = mock(UtilisateurApi.class);
-
-        // Création d'un utilisateur fictif
         Utilisateur utilisateur = new Utilisateur("John Doe");
-
-        // Définir le comportement du mock
         when(utilisateurApiMock.creerUtilisateur(utilisateur)).thenReturn(true);
-
-        // Création du service avec le mock
         UtilisateurService utilisateurService = new UtilisateurService(utilisateurApiMock);
-
-        // Appel de la méthode à tester
         boolean resultat = utilisateurService.creerUtilisateur(utilisateur);
-
-        // Vérification du résultat
         assertTrue(resultat);
-
-        // Vérification que la méthode a bien été appelée sur le mock
         verify(utilisateurApiMock).creerUtilisateur(utilisateur);
     }
+    @Test
+    void testCreerUtilisateurAvecException() {
+
+        UtilisateurApi utilisateurApiMock = mock(UtilisateurApi.class);
+        when(utilisateurApiMock.creerUtilisateur(any(Utilisateur.class))).thenThrow(new RuntimeException("Erreur serveur"));
+        UtilisateurService utilisateurService = new UtilisateurService(utilisateurApiMock);
+        assertThrows(RuntimeException.class, () -> utilisateurService.creerUtilisateur(new Utilisateur("John")));
+    }
+
 }
 
