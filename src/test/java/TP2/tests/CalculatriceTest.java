@@ -1,4 +1,4 @@
-package TP3.tests;
+package TP2.tests;
 import static org.mockito.Mockito.*;
 
 import TP2.Calculatrice;
