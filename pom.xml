@@ -29,6 +29,7 @@
             <version>4.2.0</version>
             <scope>test</scope>
         </dependency>
+
         <!-- Moteur d'exécution de JUnit 5 (nécessaire pour exécuter les tests) -->
         <dependency>
             <groupId>org.junit.jupiter</groupId>
